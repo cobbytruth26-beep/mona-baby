@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Mona ❤️</title>
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+}
+.box{
+    text-align:center;
+    color:white;
+}
+h1{
+    font-size:50px;
+}
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    font-size:22px;
+    cursor:pointer;
+    margin:10px;
+}
+#yes{
+    background:white;
+    color:#ff4d6d;
+}
+#no{
+    position:absolute;
+    background:#333;
+    color:white;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h1>Mona ❤️</h1>
+    <h2>Will you be mine forever?</h2>
+    <p>From: Sachin 💖</p>
+
+    <button id="yes" onclick="accepted()">Yes ❤️</button>
+    <button id="no">No 💔</button>
+</div>
+
+<script>
+function accepted(){
+    document.body.innerHTML =
+    "<div style='color:white;text-align:center;'>" +
+    "<h1>Yayyy Mona ❤️</h1>" +
+    "<h2>I Love You Forever 💍💕</h2>" +
+    "</div>";
+}
+
+const noBtn = document.getElementById("no");
+
+noBtn.addEventListener("mouseover", () => {
+    noBtn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+    noBtn.style.top = Math.random() * (window.innerHeight - 50) + "px";
+});
+</script>
+
+</body>
+</html>
